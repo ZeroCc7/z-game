@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://command_panel"]
+
+[ext_resource type="Script" path="res://scenes/battle/CommandPanel.gd" id="1"]
+
+[node name="CommandPanel" type="HBoxContainer"]
+offset_left = 410.0
+offset_top = 672.0
+offset_right = 844.0
+offset_bottom = 746.0
+theme_override_constants/separation = 6
+script = ExtResource("1")

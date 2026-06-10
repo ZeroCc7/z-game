@@ -1,0 +1,212 @@
+[
+  {
+    "id": "hero",
+    "name": "青玄",
+    "side": "player",
+    "element": "wood",
+    "hp": 980,
+    "mp": 220,
+    "attack": 70,
+    "defense": 42,
+    "magic": 72,
+    "speed": 48,
+    "dao": 160,
+    "resist_control": 0.08,
+    "sprite": "res://assets/battle/units/hero_qingxuan/combat_idle.png",
+    "sprite_sheet": "res://assets/battle/units/hero_qingxuan/idle_8dir.png",
+    "sprite_sheet_columns": 4,
+    "sprite_sheet_rows": 2,
+    "combat_frame": 5,
+    "animations": {
+      "idle": {
+        "sheet": "res://assets/battle/units/hero_qingxuan/idle_combat.png",
+        "columns": 2,
+        "rows": 2,
+        "frames": 4,
+        "fps": 6
+      },
+      "attack": {
+        "sheet": "res://assets/battle/units/hero_qingxuan/attack_combat.png",
+        "columns": 2,
+        "rows": 2,
+        "frames": 4,
+        "fps": 10
+      },
+      "cast": {
+        "sheet": "res://assets/battle/units/hero_qingxuan/cast_combat.png",
+        "columns": 2,
+        "rows": 2,
+        "frames": 4,
+        "fps": 10
+      },
+      "defend": {
+        "sheet": "res://assets/battle/units/hero_qingxuan/defend_combat.png",
+        "columns": 2,
+        "rows": 2,
+        "frames": 4,
+        "fps": 8
+      }
+    }
+  },
+  {
+    "id": "pet",
+    "name": "灵狐",
+    "side": "pet",
+    "element": "fire",
+    "hp": 720,
+    "mp": 80,
+    "attack": 86,
+    "defense": 30,
+    "magic": 28,
+    "speed": 55,
+    "dao": 60,
+    "resist_control": 0.04,
+    "sprite": "res://assets/battle/units/pet_linghu/combat_idle.png",
+    "sprite_sheet": "res://assets/battle/units/pet_linghu/idle_8dir.png",
+    "sprite_sheet_columns": 4,
+    "sprite_sheet_rows": 2,
+    "combat_frame": 5,
+    "animations": {
+      "idle": {
+        "sheet": "res://assets/battle/units/pet_linghu/idle_combat.png",
+        "columns": 2,
+        "rows": 2,
+        "frames": 4,
+        "fps": 7
+      },
+      "attack": {
+        "sheet": "res://assets/battle/units/pet_linghu/attack_combat.png",
+        "columns": 2,
+        "rows": 2,
+        "frames": 4,
+        "fps": 12
+      }
+    }
+  },
+  {
+    "id": "enemy_1",
+    "name": "普通妖兵",
+    "side": "enemy",
+    "element": "earth",
+    "hp": 420,
+    "mp": 0,
+    "attack": 52,
+    "defense": 24,
+    "magic": 18,
+    "speed": 38,
+    "dao": 80,
+    "resist_control": 0.05,
+    "sprite": "res://assets/battle/units/enemy_yaobing/combat_idle.png",
+    "sprite_sheet": "res://assets/battle/units/enemy_yaobing/idle_8dir.png",
+    "sprite_sheet_columns": 4,
+    "sprite_sheet_rows": 2,
+    "combat_frame": 1,
+    "animations": {
+      "attack": {
+        "sheet": "res://assets/battle/units/enemy_yaobing/attack_combat.png",
+        "columns": 2,
+        "rows": 2,
+        "frames": 4,
+        "fps": 10
+      }
+    }
+  },
+  {
+    "id": "enemy_2",
+    "name": "普通妖兵",
+    "side": "enemy",
+    "element": "water",
+    "hp": 420,
+    "mp": 0,
+    "attack": 52,
+    "defense": 24,
+    "magic": 18,
+    "speed": 38,
+    "dao": 80,
+    "resist_control": 0.05,
+    "sprite": "res://assets/battle/units/enemy_yaobing/combat_idle.png",
+    "sprite_sheet": "res://assets/battle/units/enemy_yaobing/idle_8dir.png",
+    "sprite_sheet_columns": 4,
+    "sprite_sheet_rows": 2,
+    "combat_frame": 1,
+    "animations": {
+      "attack": {
+        "sheet": "res://assets/battle/units/enemy_yaobing/attack_combat.png",
+        "columns": 2,
+        "rows": 2,
+        "frames": 4,
+        "fps": 10
+      }
+    }
+  },
+  {
+    "id": "enemy_3",
+    "name": "精英妖将",
+    "side": "enemy",
+    "element": "metal",
+    "hp": 760,
+    "mp": 0,
+    "attack": 68,
+    "defense": 38,
+    "magic": 36,
+    "speed": 42,
+    "dao": 130,
+    "resist_control": 0.12,
+    "sprite": "res://assets/battle/units/enemy_yaojiang/combat_idle.png",
+    "sprite_sheet": "res://assets/battle/units/enemy_yaojiang/idle_8dir.png",
+    "sprite_sheet_columns": 4,
+    "sprite_sheet_rows": 2,
+    "combat_frame": 1,
+    "animations": {
+      "attack": {
+        "sheet": "res://assets/battle/units/enemy_yaojiang/attack_combat.png",
+        "columns": 2,
+        "rows": 2,
+        "frames": 4,
+        "fps": 10
+      },
+      "cast": {
+        "sheet": "res://assets/battle/units/enemy_yaojiang/cast_combat.png",
+        "columns": 2,
+        "rows": 2,
+        "frames": 4,
+        "fps": 10
+      }
+    }
+  },
+  {
+    "id": "enemy_boss",
+    "name": "首领妖王",
+    "side": "enemy",
+    "element": "fire",
+    "hp": 1280,
+    "mp": 0,
+    "attack": 82,
+    "defense": 52,
+    "magic": 58,
+    "speed": 35,
+    "dao": 180,
+    "resist_control": 0.18,
+    "sprite": "res://assets/battle/units/enemy_yaowang/combat_idle.png",
+    "sprite_sheet": "res://assets/battle/units/enemy_yaowang/idle_8dir.png",
+    "sprite_sheet_columns": 4,
+    "sprite_sheet_rows": 2,
+    "combat_frame": 1,
+    "animations": {
+      "attack": {
+        "sheet": "res://assets/battle/units/enemy_yaowang/attack_combat.png",
+        "columns": 2,
+        "rows": 2,
+        "frames": 4,
+        "fps": 10
+      },
+      "cast": {
+        "sheet": "res://assets/battle/units/enemy_yaowang/cast_combat.png",
+        "columns": 2,
+        "rows": 2,
+        "frames": 4,
+        "fps": 10
+      }
+    }
+  }
+]

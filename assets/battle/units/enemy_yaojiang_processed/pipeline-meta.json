@@ -1,0 +1,64 @@
+{
+  "target": "creature",
+  "mode": "single",
+  "prompt": "",
+  "role": "",
+  "input": "E:\\WorkSpace\\Zerocc\\Private\\z-game\\assets\\battle\\units\\enemy_yaojiang_raw\\raw.png",
+  "threshold": 100,
+  "edge_threshold": 150,
+  "duration": 200,
+  "rows": 1,
+  "cols": 1,
+  "cell_size": 128,
+  "fit_scale": 0.85,
+  "trim_border": 4,
+  "edge_clean_depth": 3,
+  "align": "feet",
+  "shared_scale": false,
+  "component_mode": "largest",
+  "component_padding": 24,
+  "min_component_area": 1,
+  "edge_touch_margin": 0,
+  "frame_labels": [
+    "single-1"
+  ],
+  "frames": [
+    {
+      "grid": [
+        0,
+        0
+      ],
+      "source_box": [
+        0,
+        0,
+        1448,
+        1086
+      ],
+      "component_mode": "largest",
+      "component_count": 15,
+      "selected_component_area": 440877,
+      "selected_component_bbox": [
+        163,
+        29,
+        1193,
+        1062
+      ],
+      "crop_bbox": [
+        139,
+        5,
+        1217,
+        1078
+      ],
+      "edge_touch": false,
+      "output_size": [
+        108,
+        108
+      ],
+      "paste_position": [
+        10,
+        11
+      ]
+    }
+  ],
+  "edge_touch_frames": []
+}

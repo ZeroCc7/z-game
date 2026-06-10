@@ -1,0 +1,68 @@
+[
+  {
+    "id": "attack",
+    "name": "普攻",
+    "type": "attack",
+    "mp_cost": 0,
+    "power": 1.0
+  },
+  {
+    "id": "wood_spell",
+    "name": "青木诀",
+    "type": "element_damage",
+    "element": "wood",
+    "mp_cost": 22,
+    "power": 1.35,
+    "fx": "res://assets/battle/fx/wood_spell.png"
+  },
+  {
+    "id": "wood_bind",
+    "name": "青藤缠",
+    "type": "control",
+    "element": "wood",
+    "mp_cost": 18,
+    "base_chance": 0.55,
+    "duration": 1,
+    "fx": "res://assets/battle/fx/wood_bind.png"
+  },
+  {
+    "id": "spring_heal",
+    "name": "回春术",
+    "type": "heal",
+    "element": "wood",
+    "mp_cost": 24,
+    "power": 1.2,
+    "fx": "res://assets/battle/fx/heal.png"
+  },
+  {
+    "id": "pet_claw",
+    "name": "灵爪",
+    "type": "pet_attack",
+    "mp_cost": 0,
+    "power": 1.1
+  },
+  {
+    "id": "defend",
+    "name": "防御",
+    "type": "defend",
+    "mp_cost": 0,
+    "power": 1.0
+  },
+  {
+    "id": "boss_fire",
+    "name": "妖火咒",
+    "type": "element_damage",
+    "element": "fire",
+    "mp_cost": 0,
+    "power": 1.15
+  },
+  {
+    "id": "boss_bind",
+    "name": "妖藤锁",
+    "type": "control",
+    "element": "wood",
+    "mp_cost": 0,
+    "base_chance": 0.42,
+    "duration": 1
+  }
+]

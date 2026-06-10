@@ -1,0 +1,20 @@
+{
+  "source": "C:\\Users\\zero\\.codex\\generated_images\\019eaf61-ea99-7c52-b71f-b1a86e8708ae\\ig_0a04f6d7ec7f6c9f016a28dbe0a08c819b8eb986712f89f92e.png",
+  "columns": 4,
+  "rows": 2,
+  "cell_size": 256,
+  "frame_labels": [
+    "down",
+    "down_right",
+    "right",
+    "up_right",
+    "up",
+    "up_left",
+    "left",
+    "down_left"
+  ],
+  "combat_frame": 1,
+  "combat_direction": "down_right",
+  "background_key": "#FF00FF",
+  "normalized": true
+}
