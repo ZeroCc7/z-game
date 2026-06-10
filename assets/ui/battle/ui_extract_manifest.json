@@ -1,0 +1,459 @@
+{
+  "source": "E:\\WorkSpace\\Zerocc\\Private\\z-game\\temp\\ui_design_source.png",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "assets": [
+    {
+      "name": "battlefield_frame_full",
+      "file": "res://assets/ui/battle/battlefield_frame_full.png",
+      "source_box": [
+        12,
+        38,
+        452,
+        404
+      ],
+      "size": [
+        440,
+        366
+      ],
+      "note": "top-left interface frame with battlefield platform"
+    },
+    {
+      "name": "top_title_frame",
+      "file": "res://assets/ui/battle/top_title_frame.png",
+      "source_box": [
+        95,
+        35,
+        362,
+        128
+      ],
+      "size": [
+        267,
+        93
+      ],
+      "note": "battle title and round progress frame"
+    },
+    {
+      "name": "round_progress_dots",
+      "file": "res://assets/ui/battle/round_progress_dots.png",
+      "source_box": [
+        105,
+        101,
+        369,
+        130
+      ],
+      "size": [
+        264,
+        29
+      ],
+      "note": "round progress dot strip"
+    },
+    {
+      "name": "button_retreat",
+      "file": "res://assets/ui/battle/button_retreat.png",
+      "source_box": [
+        482,
+        38,
+        544,
+        116
+      ],
+      "size": [
+        62,
+        78
+      ],
+      "note": "main top button"
+    },
+    {
+      "name": "button_speed",
+      "file": "res://assets/ui/battle/button_speed.png",
+      "source_box": [
+        556,
+        38,
+        618,
+        116
+      ],
+      "size": [
+        62,
+        78
+      ],
+      "note": "main top button"
+    },
+    {
+      "name": "button_auto",
+      "file": "res://assets/ui/battle/button_auto.png",
+      "source_box": [
+        630,
+        38,
+        692,
+        116
+      ],
+      "size": [
+        62,
+        78
+      ],
+      "note": "main top button"
+    },
+    {
+      "name": "button_skip",
+      "file": "res://assets/ui/battle/button_skip.png",
+      "source_box": [
+        704,
+        38,
+        766,
+        116
+      ],
+      "size": [
+        62,
+        78
+      ],
+      "note": "main top button"
+    },
+    {
+      "name": "side_button_command",
+      "file": "res://assets/ui/battle/side_button_command.png",
+      "source_box": [
+        484,
+        158,
+        548,
+        232
+      ],
+      "size": [
+        64,
+        74
+      ],
+      "note": "left side function button"
+    },
+    {
+      "name": "side_button_status",
+      "file": "res://assets/ui/battle/side_button_status.png",
+      "source_box": [
+        484,
+        234,
+        548,
+        308
+      ],
+      "size": [
+        64,
+        74
+      ],
+      "note": "left side function button"
+    },
+    {
+      "name": "side_button_formation",
+      "file": "res://assets/ui/battle/side_button_formation.png",
+      "source_box": [
+        484,
+        310,
+        548,
+        386
+      ],
+      "size": [
+        64,
+        76
+      ],
+      "note": "left side function button"
+    },
+    {
+      "name": "side_button_chat",
+      "file": "res://assets/ui/battle/side_button_chat.png",
+      "source_box": [
+        484,
+        388,
+        548,
+        438
+      ],
+      "size": [
+        64,
+        50
+      ],
+      "note": "left side chat button"
+    },
+    {
+      "name": "right_info_panel",
+      "file": "res://assets/ui/battle/right_info_panel.png",
+      "source_box": [
+        622,
+        156,
+        718,
+        380
+      ],
+      "size": [
+        96,
+        224
+      ],
+      "note": "weather/battle info panel"
+    },
+    {
+      "name": "scene_stele",
+      "file": "res://assets/ui/battle/scene_stele.png",
+      "source_box": [
+        730,
+        142,
+        838,
+        402
+      ],
+      "size": [
+        108,
+        260
+      ],
+      "note": "stone stele scene prop"
+    },
+    {
+      "name": "scene_brazier",
+      "file": "res://assets/ui/battle/scene_brazier.png",
+      "source_box": [
+        640,
+        392,
+        704,
+        506
+      ],
+      "size": [
+        64,
+        114
+      ],
+      "note": "brazier scene prop"
+    },
+    {
+      "name": "scene_chain_column",
+      "file": "res://assets/ui/battle/scene_chain_column.png",
+      "source_box": [
+        820,
+        174,
+        872,
+        512
+      ],
+      "size": [
+        52,
+        338
+      ],
+      "note": "chain decoration prop"
+    },
+    {
+      "name": "scene_small_posts",
+      "file": "res://assets/ui/battle/scene_small_posts.png",
+      "source_box": [
+        730,
+        438,
+        820,
+        512
+      ],
+      "size": [
+        90,
+        74
+      ],
+      "note": "small pole decorations"
+    },
+    {
+      "name": "hp_bar_large",
+      "file": "res://assets/ui/battle/hp_bar_large.png",
+      "source_box": [
+        610,
+        564,
+        878,
+        604
+      ],
+      "size": [
+        268,
+        40
+      ],
+      "note": "large red hp bar"
+    },
+    {
+      "name": "mp_bar_large",
+      "file": "res://assets/ui/battle/mp_bar_large.png",
+      "source_box": [
+        610,
+        646,
+        878,
+        686
+      ],
+      "size": [
+        268,
+        40
+      ],
+      "note": "large blue mp bar"
+    },
+    {
+      "name": "status_icons_sheet",
+      "file": "res://assets/ui/battle/status_icons_sheet.png",
+      "source_box": [
+        612,
+        730,
+        846,
+        786
+      ],
+      "size": [
+        234,
+        56
+      ],
+      "note": "status icon set"
+    },
+    {
+      "name": "round_energy_bar",
+      "file": "res://assets/ui/battle/round_energy_bar.png",
+      "source_box": [
+        672,
+        884,
+        1152,
+        936
+      ],
+      "size": [
+        480,
+        52
+      ],
+      "note": "bottom round progress/energy bar"
+    },
+    {
+      "name": "skill_zhan_yun_jue",
+      "file": "res://assets/ui/battle/skill_zhan_yun_jue.png",
+      "source_box": [
+        16,
+        842,
+        112,
+        1010
+      ],
+      "size": [
+        96,
+        168
+      ],
+      "note": "skill button with label"
+    },
+    {
+      "name": "skill_jian_dang_ba_huang",
+      "file": "res://assets/ui/battle/skill_jian_dang_ba_huang.png",
+      "source_box": [
+        116,
+        842,
+        214,
+        1010
+      ],
+      "size": [
+        98,
+        168
+      ],
+      "note": "skill button with label"
+    },
+    {
+      "name": "skill_fei_hua_zhu_yue",
+      "file": "res://assets/ui/battle/skill_fei_hua_zhu_yue.png",
+      "source_box": [
+        218,
+        842,
+        318,
+        1010
+      ],
+      "size": [
+        100,
+        168
+      ],
+      "note": "skill button with label"
+    },
+    {
+      "name": "skill_gu_cheng_yi_jian",
+      "file": "res://assets/ui/battle/skill_gu_cheng_yi_jian.png",
+      "source_box": [
+        324,
+        842,
+        424,
+        1010
+      ],
+      "size": [
+        100,
+        168
+      ],
+      "note": "skill button with label"
+    },
+    {
+      "name": "skill_liu_feng_hui_xue",
+      "file": "res://assets/ui/battle/skill_liu_feng_hui_xue.png",
+      "source_box": [
+        430,
+        842,
+        528,
+        1010
+      ],
+      "size": [
+        98,
+        168
+      ],
+      "note": "skill button with label"
+    },
+    {
+      "name": "skill_tian_wai_fei_xian",
+      "file": "res://assets/ui/battle/skill_tian_wai_fei_xian.png",
+      "source_box": [
+        536,
+        842,
+        636,
+        1010
+      ],
+      "size": [
+        100,
+        168
+      ],
+      "note": "skill button with label"
+    },
+    {
+      "name": "end_turn_button",
+      "file": "res://assets/ui/battle/end_turn_button.png",
+      "source_box": [
+        1186,
+        794,
+        1332,
+        966
+      ],
+      "size": [
+        146,
+        172
+      ],
+      "note": "large end turn button"
+    },
+    {
+      "name": "item_button",
+      "file": "res://assets/ui/battle/item_button.png",
+      "source_box": [
+        1360,
+        846,
+        1468,
+        966
+      ],
+      "size": [
+        108,
+        120
+      ],
+      "note": "item button"
+    },
+    {
+      "name": "unit_status_player_row",
+      "file": "res://assets/ui/battle/unit_status_player_row.png",
+      "source_box": [
+        894,
+        536,
+        1498,
+        646
+      ],
+      "size": [
+        604,
+        110
+      ],
+      "note": "player unit status bar examples"
+    },
+    {
+      "name": "unit_status_enemy_row",
+      "file": "res://assets/ui/battle/unit_status_enemy_row.png",
+      "source_box": [
+        892,
+        666,
+        1498,
+        758
+      ],
+      "size": [
+        606,
+        92
+      ],
+      "note": "enemy unit status bar examples"
+    }
+  ]
+}

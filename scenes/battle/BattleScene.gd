@@ -50,9 +50,6 @@ func _build_cinematic_ui() -> void:
 	_style_panel(pet_status, Color(0.02, 0.015, 0.01, 0.78))
 	_style_panel(hero_status, Color(0.02, 0.015, 0.01, 0.78))
 	_style_panel(battle_log, Color(0.02, 0.015, 0.01, 0.62))
-	_attach_texture_backplate(hero_status, "res://assets/ui/battle/ui_status_bar.png", 8)
-	_attach_texture_backplate(pet_status, "res://assets/ui/battle/ui_status_bar.png", 8)
-	_attach_texture_backplate(battle_log, "res://assets/ui/battle/ui_status_bar.png", 4)
 	_build_top_controls()
 	_build_left_tactics()
 	_build_right_info()
@@ -88,31 +85,29 @@ func _build_top_controls() -> void:
 	var commands: Array[String] = ["逃跑", "自动", "自动", "防御"]
 	for index: int in range(labels.size()):
 		var command: String = commands[index]
-		var button: Button = _make_round_button(labels[index], 58)
-		button.position = Vector2(26 + index * 70, 18)
+		var button: Button = _make_round_button(labels[index], 48)
+		button.position = Vector2(30 + index * 64, 20)
 		button.z_index = 8
-		_attach_button_texture(button, "res://assets/ui/battle/ui_round_small.png")
 		button.pressed.connect(func() -> void:
 			_on_command_selected(command)
 		)
 		add_child(button)
 	var title: Label = Label.new()
 	title.text = "断金门之战"
-	title.position = Vector2(438, 14)
-	title.size = Vector2(180, 32)
+	title.position = Vector2(422, 16)
+	title.size = Vector2(180, 28)
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	title.add_theme_font_size_override("font_size", 24)
 	title.add_theme_color_override("font_color", Color(1.0, 0.88, 0.58))
 	title.add_theme_color_override("font_shadow_color", Color.BLACK)
 	title.add_theme_constant_override("shadow_offset_x", 2)
 	title.add_theme_constant_override("shadow_offset_y", 2)
-	_add_texture_rect("res://assets/ui/battle/ui_title_frame.png", Vector2(232, 0), Vector2(560, 82), 6)
 	title.z_index = 7
 	add_child(title)
 	for index: int in range(12):
 		var dot: ColorRect = ColorRect.new()
-		dot.position = Vector2(392 + index * 20, 58)
-		dot.size = Vector2(10, 10)
+		dot.position = Vector2(392 + index * 20, 64)
+		dot.size = Vector2(9, 9)
 		dot.color = Color(0.95, 0.63, 0.22, 0.95) if index in [0, 5, 11] else Color(0.08, 0.08, 0.08, 0.88)
 		dot.z_index = 7
 		add_child(dot)
@@ -121,19 +116,17 @@ func _build_top_controls() -> void:
 func _build_left_tactics() -> void:
 	var labels: Array[String] = ["指挥", "状态", "布阵"]
 	for index: int in range(labels.size()):
-		var button: Button = _make_round_button(labels[index], 54)
-		button.position = Vector2(28, 392 + index * 64)
+		var button: Button = _make_round_button(labels[index], 48)
+		button.position = Vector2(30, 404 + index * 62)
 		button.z_index = 9
-		_attach_button_texture(button, "res://assets/ui/battle/ui_round_small.png")
 		add_child(button)
 
 func _build_right_info() -> void:
 	for index: int in range(2):
-		var button: Button = _make_round_button(["天象", "战场"][index], 58)
-		button.position = Vector2(944, 92 + index * 84)
+		var button: Button = _make_round_button(["天象", "战场"][index], 50)
+		button.position = Vector2(946, 104 + index * 74)
 		button.z_index = 9
 		add_child(button)
-		_attach_button_texture(button, "res://assets/ui/battle/ui_round_small.png")
 	var plaque: Label = Label.new()
 	plaque.text = "断金门\n剑意涌动\n伤害+15%"
 	plaque.position = Vector2(916, 242)
@@ -144,14 +137,13 @@ func _build_right_info() -> void:
 	plaque.add_theme_color_override("font_color", Color(1.0, 0.82, 0.48))
 	plaque.add_theme_color_override("font_shadow_color", Color.BLACK)
 	plaque.add_theme_stylebox_override("normal", _round_style(Color(0.025, 0.018, 0.012, 0.82), Color(0.75, 0.52, 0.26), 8, 2))
-	_add_texture_rect("res://assets/ui/battle/ui_info_plaque.png", Vector2(904, 226), Vector2(120, 152), 8)
 	plaque.z_index = 9
 	add_child(plaque)
 
 func _build_skill_dock() -> void:
-	command_panel.position = Vector2(410, 672)
-	command_panel.size = Vector2(420, 74)
-	command_panel.add_theme_constant_override("separation", 12)
+	command_panel.position = Vector2(418, 682)
+	command_panel.size = Vector2(424, 64)
+	command_panel.add_theme_constant_override("separation", 10)
 	quick_bar.visible = false
 	var index: int = 0
 	for child in command_panel.get_children():
@@ -159,18 +151,17 @@ func _build_skill_dock() -> void:
 			var button: Button = child
 			var label_text: String = button.text
 			button.text = ""
-			button.custom_minimum_size = Vector2(66, 66)
-			button.size = Vector2(66, 66)
-			_make_button_transparent(button)
-			_add_child_texture(button, "res://assets/ui/battle/ui_round_skill.png", Vector2.ZERO, Vector2(66, 66), -1)
+			button.custom_minimum_size = Vector2(58, 58)
+			button.size = Vector2(58, 58)
+			_style_round_button(button, 58)
 			if index < SKILL_ICON_PATHS.size():
-				_add_child_texture(button, SKILL_ICON_PATHS[index], Vector2(10, 7), Vector2(46, 46), 0)
+				_add_child_texture(button, SKILL_ICON_PATHS[index], Vector2(10, 8), Vector2(38, 34), 0)
 			var label: Label = Label.new()
 			label.text = label_text
-			label.position = Vector2(2, 45)
-			label.size = Vector2(62, 18)
+			label.position = Vector2(2, 39)
+			label.size = Vector2(54, 16)
 			label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-			label.add_theme_font_size_override("font_size", 12)
+			label.add_theme_font_size_override("font_size", 11)
 			label.add_theme_color_override("font_color", Color(1.0, 0.86, 0.55))
 			label.add_theme_color_override("font_shadow_color", Color.BLACK)
 			label.add_theme_constant_override("shadow_offset_x", 1)
@@ -180,11 +171,10 @@ func _build_skill_dock() -> void:
 			index += 1
 
 func _build_end_turn_button() -> void:
-	var button: Button = _make_round_button("结束\n回合", 132)
-	button.position = Vector2(872, 620)
+	var button: Button = _make_round_button("结束\n回合", 104)
+	button.position = Vector2(900, 626)
 	button.z_index = 10
-	button.add_theme_font_size_override("font_size", 28)
-	_attach_button_texture(button, "res://assets/ui/battle/ui_round_end.png")
+	button.add_theme_font_size_override("font_size", 24)
 	button.pressed.connect(func() -> void:
 		_on_command_selected("自动")
 	)
@@ -207,22 +197,16 @@ func _make_round_button(text: String, size_px: int) -> Button:
 	button.size = Vector2(size_px, size_px)
 	button.clip_contents = true
 	button.focus_mode = Control.FOCUS_NONE
-	button.add_theme_stylebox_override("normal", _round_style(Color(0.025, 0.02, 0.015, 0.84), Color(0.78, 0.55, 0.28), size_px / 2, 2))
-	button.add_theme_stylebox_override("hover", _round_style(Color(0.09, 0.06, 0.035, 0.94), Color(1.0, 0.75, 0.34), size_px / 2, 2))
-	button.add_theme_stylebox_override("pressed", _round_style(Color(0.01, 0.01, 0.01, 0.96), Color(0.42, 0.84, 1.0), size_px / 2, 2))
+	_style_round_button(button, size_px)
 	button.add_theme_font_size_override("font_size", 15)
 	button.add_theme_color_override("font_color", Color(1.0, 0.86, 0.58))
 	return button
 
-func _make_button_transparent(button: Button) -> void:
-	button.add_theme_stylebox_override("normal", StyleBoxEmpty.new())
-	button.add_theme_stylebox_override("hover", StyleBoxEmpty.new())
-	button.add_theme_stylebox_override("pressed", StyleBoxEmpty.new())
+func _style_round_button(button: Button, size_px: int) -> void:
+	button.add_theme_stylebox_override("normal", _round_style(Color(0.018, 0.014, 0.01, 0.90), Color(0.86, 0.62, 0.28), size_px / 2, 2))
+	button.add_theme_stylebox_override("hover", _round_style(Color(0.08, 0.05, 0.025, 0.95), Color(1.0, 0.78, 0.36), size_px / 2, 2))
+	button.add_theme_stylebox_override("pressed", _round_style(Color(0.01, 0.018, 0.022, 0.98), Color(0.35, 0.84, 1.0), size_px / 2, 2))
 	button.add_theme_stylebox_override("focus", StyleBoxEmpty.new())
-
-func _attach_button_texture(button: Button, path: String) -> void:
-	_make_button_transparent(button)
-	_add_child_texture(button, path, Vector2.ZERO, button.size, -1)
 
 func _add_child_texture(parent: Control, path: String, position_value: Vector2, size_value: Vector2, z: int) -> TextureRect:
 	parent.clip_contents = true
@@ -231,27 +215,11 @@ func _add_child_texture(parent: Control, path: String, position_value: Vector2, 
 		texture_rect.texture = load(path)
 	texture_rect.position = position_value
 	texture_rect.size = size_value
+	texture_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	texture_rect.stretch_mode = TextureRect.STRETCH_SCALE
 	texture_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	texture_rect.z_index = z
 	parent.add_child(texture_rect)
-	return texture_rect
-
-func _add_texture_rect(path: String, position_value: Vector2, size_value: Vector2, z: int) -> TextureRect:
-	var texture_rect: TextureRect = TextureRect.new()
-	if ResourceLoader.exists(path):
-		texture_rect.texture = load(path)
-	texture_rect.position = position_value
-	texture_rect.size = size_value
-	texture_rect.stretch_mode = TextureRect.STRETCH_SCALE
-	texture_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	texture_rect.z_index = z
-	add_child(texture_rect)
-	return texture_rect
-
-func _attach_texture_backplate(control: Control, path: String, z: int) -> TextureRect:
-	var texture_rect: TextureRect = _add_texture_rect(path, control.position, control.size, z)
-	control.z_index = z + 1
 	return texture_rect
 
 func _round_style(fill: Color, border: Color, radius: int, border_width: int) -> StyleBoxFlat:
